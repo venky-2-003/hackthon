@@ -29,7 +29,7 @@ pipeline {
             steps {
                 script {
                     echo "Running container for testing..."
-                    sh "docker run -d --rm -p 8080:80 --name ${APP_NAME}_container ${DOCKER_IMAGE}"
+                    sh "docker run -d --rm -p 8087:80 --name ${APP_NAME}_container ${DOCKER_IMAGE}"
                     // Wait for container to start
                     sh "sleep 5"
                     // Simple check to see if index.html is present
